@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  --light-blue: rgb(113, 176, 216);
-}
-
 @font-face {
   font-family: "Roboto";
   font-weight: 400;
@@ -32,6 +28,29 @@
   font-weight: 700;
   src: url("assets/fonts/roboto-bold-webfont.woff2") format("woff2"),
     url("assets/fonts/roboto-bold-webfont.woff") format("woff");
+}
+
+.screenshot-1 {
+  background-color: red;
+}
+.screenshot-2 {
+  background-color: rgb(125, 100, 192);
+}
+.screenshot-3 {
+  background-color: rgb(100, 153, 21);
+}
+.screenshot-4 {
+  background-color: rgb(226, 132, 148);
+}
+.screenshot-5 {
+  background-color: rgb(206, 150, 47);
+}
+.screenshot-6 {
+  background-color: var(--light-blue);
+}
+
+:root {
+  --light-blue: rgb(113, 176, 216);
 }
 
 body {
@@ -88,55 +107,66 @@ h1 {
 }
 
 .header-p {
-  padding: 0 20px 100px;
+  padding: 0 2rem 4rem;
   font-size: 1.8rem;
   color: gray;
 }
 
 .project-header {
   display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-weight: lighter;
+
+}
+
+.project-icons {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  gap: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Times New Roman", "Roboto", Times, serif;
 }
 
 h2 {
+  font-family: "Times New Roman", "Roboto", Times, serif;
   font-size: 2.5rem;
   margin: 3rem 0 0 3rem;
-  font-family: "Times New Roman", "Roboto", Times, serif;
 }
 
 .project-grid {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 2rem;
   grid-template-columns: repeat(3, minmax(200px, 1fr));
-  margin: 1rem 3rem;
+  margin: 1rem 3rem 3rem;
 }
 
 .screenshot {
-  padding: 3rem;
+  font-family: "Times New Roman", "Roboto", Times, serif;
+  padding: 5rem 2rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: white;
-}
-.screenshot-1 {
-  background-color: red;
-}
-.screenshot-2 {
-  background-color: rgb(125, 100, 192);
-}
-.screenshot-3 {
-  background-color: rgb(100, 153, 21);
-}
-.screenshot-4 {
-  background-color: rgb(226, 132, 148);
-}
-.screenshot-5 {
-  background-color: rgb(206, 150, 47);
-}
-.screenshot-6 {
-  background-color: var(--light-blue);
 }
 
 .project {
   box-shadow: 4px 4px 19px -3px rgba(66, 68, 90, 1);
+}
+
+.project-title {
+  font-size: 1.9rem;
+  font-weight: lighter;
+}
+
+.project-text {
+  color: gray;
+  padding: 0 1rem 4rem;
+  font-size: 1.3rem;
 }
 
 svg {
@@ -152,10 +182,10 @@ a {
 .icons-footer {
   display: flex;
   font-size: 2.5rem;
-  gap: 15px;
+  gap: 20px;
 }
 .icons-header {
-  margin: 0 30px 20px 0;
+  margin: 0 40px 20px 0;
   justify-content: end;
 }
 .icons-footer {
@@ -190,7 +220,7 @@ footer {
 .contact-flex {
   display: flex;
   gap: 1rem;
-  margin: .3rem 0;
+  margin: 0.3rem 0;
 }
 
 .adress-flex {
@@ -199,5 +229,6 @@ footer {
 
 .email-logo,
 .phone-logo {
-  filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(791%) hue-rotate(230deg) brightness(116%) contrast(82%);
+  filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(791%)
+    hue-rotate(230deg) brightness(116%) contrast(82%);
 }
