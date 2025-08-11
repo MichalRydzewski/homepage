@@ -4,3 +4,73 @@
   box-sizing: border-box;
 }
 
+:root {
+  --light-blue: rgb(113, 176, 216);
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  src: url("assets/fonts/roboto-regular-webfont.woff2") format("woff2"),
+  url("assets/fonts/roboto-regular-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 300;
+  src: url("assets/fonts/roboto-light-webfont.woff2") format("woff2"),
+  url("assets/fonts/roboto-light-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-style: italic;
+  src: url("assets/fonts/roboto-italic-webfont.woff2") format("woff2"),
+  url("assets/fonts/roboto-italic-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  src: url("assets/fonts/roboto-bold-webfont.woff2") format("woff2"),
+  url("assets/fonts/roboto-bold-webfont.woff") format("woff");
+}
+
+.project-grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  margin: 3rem;
+}
+
+.screenshot {
+  border: solid 2px black;
+  border-radius: 5px;
+  padding: 20px;
+  color: white;
+}
+.screenshot-1 {
+  background-color: red;
+}
+.screenshot-2 {
+  background-color: rgb(125, 100, 192);
+}
+.screenshot-3 {
+  background-color: rgb(100, 153, 21);
+}
+.screenshot-4 {
+  background-color: rgb(226, 132, 148);
+}
+.screenshot-5 {
+  background-color: rgb(206, 150, 47);
+}
+.screenshot-6 {
+  background-color: var(--light-blue);
+}
+
+footer {
+  background-color: var(--light-blue);
+  color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
