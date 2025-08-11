@@ -55,6 +55,14 @@
 
 body {
   font-family: "Roboto", sans-serif, Arial, Helvetica;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }
 
 .ashley {
@@ -75,7 +83,10 @@ body {
 
 header {
   position: absolute;
+  justify-content: center;
   top: 0;
+  left: 0;
+  right: 0;
   color: black;
   margin: 3rem 5rem;
   display: flex;
@@ -98,7 +109,7 @@ h1 {
   font-family: "Times New Roman", "Roboto", Times, serif;
   font-weight: lighter;
   font-size: 3rem;
-  padding: 25px 0 20px 20px;
+  padding: 25px 0 20px 2rem;
 }
 
 .header-text {
@@ -135,15 +146,16 @@ h3 {
 
 h2 {
   font-family: "Times New Roman", "Roboto", Times, serif;
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin: 3rem 0 0 3rem;
+  font-weight: lighter;
 }
 
 .project-grid {
   display: grid;
   grid-gap: 2rem;
   grid-template-columns: repeat(3, minmax(200px, 1fr));
-  margin: 1rem 3rem 3rem;
+  margin: 1rem 3rem 5rem;
 }
 
 .screenshot {
@@ -231,4 +243,16 @@ footer {
 .phone-logo {
   filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(791%)
     hue-rotate(230deg) brightness(116%) contrast(82%);
+}
+
+/* media queries */
+
+@media (600px < width <= 800px) {
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+}
+
+@media (width <= 600px) {
+
 }
