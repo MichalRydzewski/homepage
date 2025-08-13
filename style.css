@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+img {
+  max-inline-size: 100%;
+  display: block;
+}
+
 @font-face {
   font-family: "Roboto";
   font-weight: 400;
@@ -80,23 +85,28 @@ main {
   background-color: var(--light-blue);
   height: 610px;
   box-shadow: 4px 4px 19px -3px rgba(66, 68, 90, 1);
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.header-container {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 header {
-  z-index: 2;
-  position: relative;
-  justify-content: center;
-  top: -38rem; 
-  left: 0;
-  right: 0; 
   color: black;
-  margin: 3rem 6rem;
+  margin: 30px 60px;
   display: flex;
+  justify-content: center;
   align-items: center;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  z-index: 1;
 }
 
 .header-foto {
-  width: 26rem;
+  max-width: 22rem;
   height: auto;
   box-shadow: 4px 4px 19px -3px rgba(66, 68, 90, 1);
 }
@@ -150,10 +160,7 @@ h2 {
   font-size: 3rem;
   margin: 3rem 0 0 3rem;
   font-weight: lighter;
-}
-
-.grid-container {
-  margin-top: -38rem;
+  white-space: nowrap;
 }
 
 .project-grid {
@@ -221,12 +228,12 @@ footer {
 }
 
 .footer-foto {
-  width: 40rem;
-  height: auto;
+  width: 40%;
+  max-width: 700px;
 }
 
 .footer-left {
-  width: 550px;
+  max-width: 450px;
 }
 
 .contact-me {
@@ -244,6 +251,10 @@ footer {
   margin: 1.2rem 0;
 }
 
+.mail {
+  overflow-wrap: anywhere;
+}
+
 .email-logo,
 .phone-logo {
   filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(791%)
@@ -256,16 +267,17 @@ footer {
   header {
     max-width: 800px;
     display: block;
-    margin: 0;
+    margin: 1.5rem;
   }
   .profile {
-    float: left;
-    margin: 15px;
+    float: inline-start;
+    margin: 10px;
   }
-
+  .project-text {
+    padding: 10px;
+  }
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
-    /* margin: 1rem 2rem 4rem; */
   }
 
   footer {
@@ -276,6 +288,24 @@ footer {
 @media (width <= 600px) {
   .project-grid {
     grid-template-columns: 1fr;
-    margin: 1rem 5rem 4rem
+  }
+
+  header {
+    flex-direction: column;
+    margin: -1rem;
+  }
+  .header-p{
+    font-size: 1.3rem;
+    padding: 0 3rem 2rem;
+  }
+}
+
+@media (width <= 800px) {
+  footer {
+    flex-direction: column;
+  }
+  .footer-foto{
+    max-width: 130%;
+    width: 100%;
   }
 }
